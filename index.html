@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Lato.css">
+    <link rel="stylesheet" href="assets/css/Montserrat.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="72">
+    <nav class="navbar navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top">Kyla's task</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler text-white bg-primary text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#services">Services</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#tasks">Tasks</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center text-white bg-primary masthead">
+        <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="assets/img/kyla.jpg">
+            <h1>Kyla's task management</h1>
+            <hr class="star-light">
+            <h2 class="fw-light mb-0">Managing task without an issues!</h2>
+        </div>
+    </header>
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary">Services</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col"><button class="btn btn-primary CreateTaskBTN" id="CreateTaskBTN" type="button" data-bs-target="#CreateTaskModal" data-bs-toggle="modal">Create Task</button></div>
+                <div class="col"><button class="btn btn-primary UpdateTaskBTN" id="UpdateTaskBTN" type="button" data-bs-target="#UpdateTaskModal" data-bs-toggle="modal">Update Task</button></div>
+                <div class="col"><button class="btn btn-primary" id="DeleteTaskBTN" type="button" data-bs-target="#DeleteTaskModal" data-bs-toggle="modal">Delete task</button></div>
+                <div class="col"><button class="btn btn-primary" id="ViewTaskBTN" type="button" data-bs-target="#ViewTaskModal" data-bs-toggle="modal">View Task</button></div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" role="dialog" tabindex="-1" id="CreateTaskModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Create Task</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div><label class="form-label">Task Title:&nbsp;<input type="text" id="CreateTaskName" class="CreateTaskName"></label></div>
+                        <div><label class="form-label d-md-flex align-items-md-center">Description:&nbsp;<textarea id="CreateTaskDescription" class="CreateTaskDescription"></textarea></label></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" id="createTaskSaveBTN" type="submit">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="UpdateTaskModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update Task</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div><label class="form-label">Task ID:&nbsp;<input type="number" id="UpdateTaskID" class="UpdateTaskID"></label></div>
+                        <div><label class="form-label">Task Title:&nbsp;<input type="text" id="UpdateTaskName" class="UpdateTaskName"></label></div>
+                        <div><label class="form-label d-md-flex align-items-md-center">Description:&nbsp;<textarea id="UpdateTaskDescription" class="UpdateTaskDescription"></textarea></label></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="submit" id="UpdateTaskBTN">Update</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="DeleteTaskModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Task</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div><label class="form-label">Task ID:&nbsp;<input type="number" id="DeleteTaskID" class="DeleteTaskID"></label></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button" id="DeleteTaskBTN">Delete</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="ViewTaskModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">View Task</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div><label class="form-label">Task ID:&nbsp;<input type="number" id="ViewTaskID" class="ViewTaskID"></label></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button" id="ViewTaskBTN">View</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="ViewTaskModalExtension">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">View Task</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                        <div id="ViewInformation" class="ViewInformation"></div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button" id="markAsDoneBTN">Mark as Done</button></div>
+            </div>
+        </div>
+    </div>
+    <section class="text-white bg-primary mb-0" id="about">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-white">About</h2>
+            <hr class="star-light mb-5">
+            <div class="row">
+                <div class="col-lg-4 ms-auto">
+                    <p class="lead"><br>Personal task management helps Kyla stay organized and focused, breaking big goals into manageable steps and prioritizing her day effectively. With tools like to-do lists and reminders, she can keep track of deadlines and reduce stress, ensuring she’s always on top of her schedule.<br><br></p>
+                </div>
+                <div class="col-lg-4 me-auto">
+                    <p class="lead"><br>By categorizing tasks and focusing on what matters most, Kyla can avoid burnout and achieve her goals more efficiently. This personalized system not only boosts productivity but also brings a sense of purpose and accomplishment, helping her make the most of every day.<br><br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tasks" class="tasks">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary mb-0">Tasks</h2>
+            <hr class="star-dark mb-5">
+            <div class="row g-0">
+                <div class="col" id="ColumnForCurrentTasksTitle">
+                  <h3>Current tasks</h3>
+                </div>
+                <div class="col" id="ColumnForFinishedTasksTitle">
+                  <h3>Finished tasks</h3>
+                </div>
+              </div>
+              <div class="row g-0">
+                <div class="col" id="ColumnForAllCurrentTask">
+                </div>
+                <div class="col" id="ColumnForAllTaskMarkedFinish"></div>
+              </div>
+        </div>
+    </section>
+    <footer class="text-center footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <p>Dauin Negros Oriental</p>
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase">Social Media</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-google-plus fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social rounded-circle" role="button" href="#"><i class="fa fa-twitter fa-fw"></i></a></li>
+                        <li class="list-inline-item"></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-uppercase mb-4">Contact me</h4>
+                    <p class="lead mb-0"><span>+639123456789</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="text-center text-white copyright py-4">
+        <div class="container"><small>Copyright © KaylaTasks2024</small></div>
+    </div>
+    <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="text-center d-block rounded text-white" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/freelancer.js"></script>
+    <script src="/src/client.js"></script>
+</body>
+</html>

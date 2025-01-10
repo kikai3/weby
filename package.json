@@ -1,0 +1,24 @@
+{
+  "name": "kylafolder",
+  "version": "1.0.0",
+  "description": "Midterm-project",
+  "main": "server.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon ./src/server.mjs ",
+    "start": "nodemon ./src/server.mjs"
+  },
+  "keywords": [],
+  "author": "Devv",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "type": "module"
+}
